@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.dao.Test" >
+    <insert id="Addnumber" parameterType="String">
+        INSERT INTO test(aid,extra) VALUES(#{arg0},#{arg1})
+    </insert>
+    
+    <select id="Selectorder" parameterType="java.lang.String" resultType="int">
+        select id FROM test where aid=#{aid}
+    </select>
+    
+    
+<update id="Createtb" parameterType="String">
+      CREATE TABLE `${param1}` (
+      `id` int(20) not null auto_increment,
+      `${param2}` `${param4}` NOT NULL,
+      `${param3}` `${param5}` not null,
+      PRIMARY KEY (`id`))
+     </update> 
+     
+      <update id="Gotdb" parameterType="String">
+      CREATE database `${param1}`
+      </update>
+      
+      <update id="crtt" parameterType="String">
+     
+      use `${param1}`;
+
+      </update>
+      
+      <update id="uuu" parameterType="String" >
+      
+      CREATE TABLE `${param1}` (
+      `id` int(20) not null auto_increment,
+      `${param2}` varchar(20) NOT NULL,
+      `${param6}` varchar(20) NOT NULL,
+      `${param4}` varchar(20) not null,
+      `${param7}` varchar(20) not null,
+      PRIMARY KEY (`id`)) 
+      
+      </update>
+      
+      
+      <update id="confirmtya" parameterType="String">
+      
+      alter table `${param1}` modify column `${param2}` ${param3}(20);
+      
+      
+      </update>
+      
+      <update id="newdatabase" parameterType="String" >
+      
+      CREATE database `${param1}`
+      
+      </update>
+      
+      <update id="newtable">
+      
+      CREATE TABLE `${param1}` (
+              材料批次编号  varchar(255),
+              测试编号 varchar(255),
+              测试类型  varchar(255),
+              取样方向  varchar(255),
+              试样形状  varchar(255),
+               标距长度 varchar(255),
+               单位 varchar(255),
+               测试设备 varchar(255),
+               测试日期 varchar(255),
+               测试员 varchar(255),
+      `ID` int(255) not null auto_increment,
+      PRIMARY KEY (`ID`)) 
+      
+      </update>
+      
+      <update id="confirmtyb" parameterType="String">
+      
+      alter table `${param1}` modify column `${param2}` ${param3}(20);
+      
+      </update>
+      
+      <update id="selectdb">
+      
+      use `${dbname}`;
+      
+      </update>
+      
+       <update id="crettable" parameterType="String" >
+      
+      CREATE TABLE `${param1}` (
+      `ID` int(20) not null auto_increment,
+      `${param2}` varchar(255) NOT NULL,
+      `${param6}` varchar(255) NOT NULL,
+      `${param4}` varchar(255) not null,
+      `${param7}` varchar(255) not null,
+      PRIMARY KEY (`ID`)) 
+      
+      </update>
+      
+      
+      <update id="exconfirmtya" parameterType="String">
+      
+      alter table `${param1}` modify column `${param2}` ${param3}(20);
+      
+      
+      </update>
+      
+     <update id="selectdatabase" parameterType="String">
+      
+      use `${param1}`;
+      
+      </update>
+      
+      <update id="exconfirmtyb" parameterType="String">
+      
+      alter table `${param1}` modify column `${param2}` ${param3}(20);
+      
+      </update>
+      
+      <insert id="storedata" parameterType="String">
+            INSERT INTO ${param1}
+(材料批次编号, 测试编号, 测试类型, 取样方向, 试样形状, 标距长度, 单位, 测试设备, 测试日期, 测试员)
+VALUES(#{param2},#{param3},#{param4},#{param5},#{param6},#{param7},#{param8},#{param9},#{param10},#{param11});
+      </insert>
+      
+      <select id="selecttype" resultType="String" parameterType="String">
+      
+      select 单位 from 单位表;
+      
+      </select>
+      
+      <select id="selectunit" resultType="String" parameterType="String">
+      
+      select 字段类型 from 类型表;
+      
+      </select>
+      
+    
+    
+</mapper>
+
