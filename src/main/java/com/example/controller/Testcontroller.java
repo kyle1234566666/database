@@ -99,6 +99,7 @@ public class Testcontroller {
 
 	}
 
+	
 	@RequestMapping("/newdatabase")
 	public JSONObject newdatabase(String db, String tb) {
 		testMapper.newdatabase(db);
